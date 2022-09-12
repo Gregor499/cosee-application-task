@@ -1,0 +1,54 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+
+    width: 100%;
+
+    list-style: none;
+
+}
+
+.flex-item {
+    background: tomato;
+
+    padding: 5px;
+    width: 10%;
+    height: 50px;
+    margin-top: 0px;
+    line-height: 50px;
+
+    color: black;
+    font-weight: bold;
+    font-family: "Roboto Light", serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.headline{
+    font-weight: bold;
+    font-family: "Roboto Light", serif;
+    font-size: 4em;
+    text-align: center;
+    text-decoration-line: underline;
+
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+table, th, td {
+    border: thin solid;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-family: "Roboto Light", serif;
+
+}
+
+.table {
+    width: calc(100vw - 20px);
+    margin: auto;
+}
+
+body {
+    margin: 30px;
+}
