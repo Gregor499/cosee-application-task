@@ -6,11 +6,12 @@
         <groupId>com.github.gregor499</groupId>
         <artifactId>neuefische-capstone-project-2022-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath></relativePath>
     </parent>
 
-    <artifactId>neuefische-capstone-project-2022-backend</artifactId>
+    <artifactId>cosee-application-task-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>neuefische-capstone-project-2022-backend</name>
+    <name>cosee-application-task-backend</name>
     <description>Demo to deploy frontend and backend</description>
     <dependencies>
 
@@ -31,11 +32,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -45,18 +41,6 @@
             <groupId>de.flapdoodle.embed</groupId>
             <artifactId>de.flapdoodle.embed.mongo</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
         </dependency>
 
         <dependency>
@@ -131,7 +115,7 @@
                             <outputDirectory>${project.build.directory}/classes/static</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${project.parent.basedir}/frontend/build</directory>
+                                    <directory>${project.parent.artifactId}/frontend/build</directory>
                                     <filtering>false</filtering>
                                 </resource>
                             </resources>
