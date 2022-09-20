@@ -12,8 +12,8 @@ import java.util.Optional;
 public class GalleryItemService {
     private final GalleryItemRepository galleryItemRepository;
 
-    public void addGalleryItem(GalleryItem galleryItem){
-        galleryItemRepository.save(galleryItem);
+    public GalleryItem addGalleryItem(GalleryItem galleryItem){
+        return galleryItemRepository.save(galleryItem);
     }
 
     public List<GalleryItem> ListAllGalleryItems(){

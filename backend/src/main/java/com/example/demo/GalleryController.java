@@ -8,24 +8,22 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 @RequiredArgsConstructor
 public class GalleryController {
     private final GalleryItemService galleryItemService;
 
-    @PostMapping("/data")
+    @PostMapping("/pictureData")
     @ResponseBody
-    void addGalleryItem(GalleryItem galleryItem) {
+    GalleryItem addGalleryItem(GalleryItem galleryItem) {
         galleryItemService.addGalleryItem(galleryItem);
+        return galleryItemService.ListGalleryItemById(galleryItem.getId()).orElseThrow();
     }
 
-    @GetMapping("data")
-    List<GalleryItem> getGalleryItems(){
+    @GetMapping("/pictureData")
+    List<GalleryItem> getGalleryItems() {
         return galleryItemService.ListAllGalleryItems();
     }
 
-    @GetMapping("data")
-    GalleryItem getGalleryItem(String id){
-        return galleryItemService.ListGalleryItemById(id).orElseThrow();
-    }
 
 }
